@@ -1,0 +1,60 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KNN Web App (Iris)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>KNN 기반 Iris 분류</h1>
+    <p>꽃받침/꽃잎의 길이와 너비를 입력해 품종을 예측해보세요.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>입력 값</h2>
+      <form id="predict-form">
+        <div class="grid">
+          <label>
+            Sepal length
+            <input type="number" step="0.01" id="sepal_length" placeholder="예: 5.1" required />
+          </label>
+          <label>
+            Sepal width
+            <input type="number" step="0.01" id="sepal_width" placeholder="예: 3.5" required />
+          </label>
+          <label>
+            Petal length
+            <input type="number" step="0.01" id="petal_length" placeholder="예: 1.4" required />
+          </label>
+          <label>
+            Petal width
+            <input type="number" step="0.01" id="petal_width" placeholder="예: 0.2" required />
+          </label>
+        </div>
+
+        <button type="submit">예측하기</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>결과</h2>
+      <div id="result" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>서버 상태</h2>
+      <div id="health" class="health"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Made with Flask & scikit-learn</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
